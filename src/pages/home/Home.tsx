@@ -3,12 +3,17 @@ function Home() {
         <>
             <div className="w-full flex justify-center bg-gradient-to-b from-neutral-200 to-transparent">
                 <div className="container grid grid-cols-1 md:grid-cols-2 text-stone-800">
-                    <div className="ffont-medium order-2 md:order-1 flex flex-col items-center justify-center gap-4 px-4 py-4">
+                    <div className="font-medium order-2 md:order-1 flex flex-col items-center justify-center gap-4 px-4 py-4">
                         <h2>Seja Bem Vinde!</h2>
                         <p>Aqui você encontra Medicamentos e Cosméticos!</p>
+
+                        <div className="flex justify-around gap-4">
+                            <div className="px-4 py-2 border text-white bg-slate-600 border-white rounded hover:bg-slate-800">
+                                Cadastrar Produto
+                            </div>
+                        </div>
                     </div>
 
-                    
                     
                 </div>
                 <div className="order-1 md:order-2 flex justify-center" >

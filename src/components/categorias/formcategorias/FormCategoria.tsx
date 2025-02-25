@@ -1,10 +1,8 @@
 import { ChangeEvent, useEffect, useState } from "react";
-import Categoria from "../../../models/Categoria";
 import { RotatingLines } from "react-loader-spinner";
-import { atualizar, cadastrar, listar } from "../../../services/Sevice";
 import { useNavigate, useParams } from "react-router-dom";
-
-
+import Categoria from "../../../models/Categoria";
+import { atualizar, cadastrar, listar } from "../../../services/Sevice";
 
 function FormCategoria() {
 
@@ -30,7 +28,7 @@ function FormCategoria() {
         } else {
             setCategoria({
                 id: 0,
-                tipo: "",
+                nome: "",
             })
         }
     }, [id])
@@ -93,7 +91,7 @@ function FormCategoria() {
                         name="tipo"
                         className="p-2 border-2 rounded border-slate-700 bg-white"
                         required
-                        value={categoria.tipo}
+                        value={categoria.nome}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                     />
                 </div>
@@ -109,7 +107,7 @@ function FormCategoria() {
                             width="24"
                             visible={true}
                         /> :
-                        <span>{id !== undefined ? 'Atualizar' : 'Cadastrar'}</span>
+                        <span>{id === undefined ? "Cadastrar" : "Atualizar"}</span>
                     }
                 </button>
             </form>

@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
-import { RotatingLines } from "react-loader-spinner";
 import Categoria from '../../../models/Categoria'
-import CardCategorias from '../cardcategorias/CardCategorias'
+import { RotatingLines } from "react-loader-spinner";
+
 import { listar } from '../../../services/Sevice'
+import CardCategorias from '../cardcategorias/CardCategorias';
 
 function ListarCategorias() {
 
@@ -34,7 +35,7 @@ function ListarCategorias() {
                     strokeColor="white"
                     strokeWidth="5"
                     animationDuration="0.75"
-                    width="80"
+                    width="24"
                     visible={true}
                 />
             )}
